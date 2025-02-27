@@ -1,12 +1,21 @@
 import { useState, useEffect } from "react";
 
-function CountryStats() {
-  const nordicCountries = ["Sweden", "Denmark", "Norway", "Finland", "Iceland"];
+function GlobalCountries() {
+  const globalCountries = [
+    "USA",
+    "France",
+    "UK",
+    "Germany",
+    "Italy",
+    "China",
+    "Russia",
+    "Japan",
+  ];
   const [data, setData] = useState([]);
 
   useEffect(() => {
     Promise.all(
-      nordicCountries.map((country) =>
+      globalCountries.map((country) =>
         fetch(`https://disease.sh/v3/covid-19/countries/${country}`)
           .then((response) => response.json())
           .catch((error) =>
@@ -35,4 +44,4 @@ function CountryStats() {
   );
 }
 
-export default CountryStats;
+export default GlobalCountries;

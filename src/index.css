@@ -1,35 +1,46 @@
+/* BODY */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
 }
 
 #root {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  margin: 0;
-  padding: 0;
 }
 
 body {
   display: flex;
   flex-direction: column;
-  margin: 0;
-  padding: 0;
+  background-color: #fff;
 }
+
+/* BODY */
+
+/* HEADER */
 
 .header-container {
   display: flex;
   justify-content: space-between;
-  width: 100%;
   align-items: center;
-  padding: 20px;
+  padding: 30px 20px;
+  background-color: #242424;
+  width: 100%;
 }
 
 .header-logo {
-  font-size: 20px;
+  font-size: 18px;
+  position: absolute;
+  left: 20px;
 }
 
 .nav-bar {
@@ -42,60 +53,345 @@ body {
 
 .nav-bar a {
   text-decoration: none;
-  font-size: 20px;
-  color: #fff;
+  font-size: 18px;
+  color: #ffffffde;
 }
 
-.country-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Horisontell centrering */
-  align-items: center; /* Vertikal centrering */
-  min-height: 100vh; /* Säkerställ att containern täcker hela sidan */
+.nav-bar a:hover {
+  color: #53565f;
 }
 
-.country-box {
-  width: 300px;
-  height: 300px;
-  background-color: #3e4145;
-  border-radius: 12px;
+/* HEADER */
+
+/* HERO-BANNER */
+
+.hero-container {
+  padding: 60px 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: flex-start;
+  background-image: url("./assets/covid19.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.2);
+  background-blend-mode: multiply;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 500px;
+}
+
+.hero-container p {
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 30px;
+  max-width: 600px;
+}
+
+.hero-link {
+  background-color: #23af2d;
+  color: #ffffffde;
+  padding: 15px 30px;
+  border-radius: 26px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.hero-link:hover {
+  background-color: #23af2cc7;
+}
+
+.text-overlay,
+.text-overlay-bottom {
+  position: relative;
+  display: inline-block;
+}
+
+.text-overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #005ec5;
+}
+
+.text-overlay-bottom::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #005ec5;
+}
+
+/* HERO-BANNER */
+
+/* NORDICCOUNTRIES COMPONENT */
+
+.country-container {
+  padding: 30px 20px;
+  background-color: #f1f1f5;
+}
+
+.norden-rubrik {
+  color: #242424;
+  font-size: 34px;
+  text-align: left;
+  margin-bottom: 20px;
+  margin-top: 5%;
+  margin-left: 20px;
+}
+
+.country-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 30px;
+  gap: 10px;
+}
+
+.country-box {
+  width: 270px;
+  height: 270px;
+  background-color: #005ec5;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.country-stats {
+.country-box h1 {
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 500;
+  margin-bottom: auto;
 }
 
 .country-box p {
   font-size: 16px;
   font-weight: 400;
-  margin-bottom: 10px;
+  margin-bottom: auto;
 }
 
-.home-container {
+.country-coming {
+  margin-top: 10px;
+}
+
+.utforska-link {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  text-align: center;
-}
-
-.home-container h1 {
-  font-size: 30px;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #23af2d;
+  color: #ffffffde;
+  border-radius: 26px;
+  text-decoration: none;
+  font-size: 16px;
   font-weight: 500;
+  width: fit-content;
+  margin: auto;
+  margin-bottom: 5%;
 }
 
-.home-container p {
-  font-size: 20px;
+/* NORDICCOUNTRIES COMPONENT */
+
+/* INFORMATION MODERBOLAG */
+
+.moderbolag-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 20px;
+  gap: 20px;
+  background-color: #fff;
 }
 
-.home-links {
+.moderbolag-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+  margin-top: 10%;
+}
+
+.moderbolag-bild {
+  flex: 0 0 auto;
+}
+
+.moderbolag-bild img {
+  margin-left: 20px;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.moderbolag-text {
+  flex: 1;
+  margin-left: 20px;
+  max-width: 600px;
+  margin-top: 4%;
+}
+
+.moderbolag-text h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+  color: #242424;
+}
+
+.moderbolag-text p {
+  font-size: 16px;
+  color: #242424;
+}
+
+.text-overlay,
+.text-overlay-bottom,
+.text-overlay-bottom-green {
+  position: relative;
+  display: inline-block;
+}
+
+.text-overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #005ec5;
+}
+
+.text-overlay-bottom::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #005ec5;
+}
+
+.text-overlay-bottom-green::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #23af2d;
+}
+
+/* INFORMATION MODERBOLAG */
+
+/* KARTA MODERBOLAG */
+
+.karta-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 30px 20px;
+  gap: 20px;
+  margin-top: 10%;
+}
+
+.karta-content {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+}
+
+.karta-bild {
+  flex: 0 0 auto;
+}
+
+.karta-bild img {
+  margin-right: 20px;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.karta-text {
+  flex: 1;
+  margin-right: 20px;
+  max-width: 600px;
+  margin-top: 10%;
+}
+
+.karta-text h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+  color: #242424;
+}
+
+.karta-text p {
+  font-size: 16px;
+  color: #242424;
+}
+
+/* KARTA MODERBOLAG */
+
+/* FOOTER  */
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #242424;
+  margin-top: 10%;
+}
+
+.footer-om-oss {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 12px;
+  width: 30%;
+}
+
+.footer-nav {
+  width: 30%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.footer-nav ul {
+  list-style: none;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.footer-nav li {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.footer-nav h1 {
+  font-size: 12px;
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.footer-nav li a {
+  color: #f1f1f5;
+  text-decoration: none;
+}
+
+.footer-nav li a:hover {
+  color: #53565f;
+}
+
+.copyright {
+  font-size: 12px;
   display: flex;
   justify-content: center;
   text-align: center;
-  gap: 10px;
 }
+
+/* FOOTER */
