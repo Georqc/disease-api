@@ -5,9 +5,9 @@ function Header() {
     <div className="header-container">
       <h1 className="header-logo">Pandemica</h1>
       <nav className="nav-bar">
-        <Link to="#">Startsida</Link>
-        <Link to="#">Statistik</Link>
-        <a href="#">Globalt</a>
+        <Link to="/">Startsida</Link>
+        <Link to="/statistik">Statistik</Link>
+        <Link to="/journal">Journal</Link>
       </nav>
     </div>
   );

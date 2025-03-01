@@ -5,12 +5,12 @@ function Information() {
   return (
     <>
       <section className="moderbolag-container">
-        <div class="moderbolag-content">
-          <div class="moderbolag-bild">
+        <div className="moderbolag-content">
+          <div className="moderbolag-bild">
             <img src={sjukhus} alt="Sjukhus-bild" />
           </div>
 
-          <div class="moderbolag-text">
+          <div className="moderbolag-text">
             <h2>Varför gör vi det vi gör?</h2>
             <p>
               Vi strävar efter att göra viktig hälsodata, som{" "}
@@ -37,13 +37,13 @@ function Information() {
           </div>
         </div>
       </section>
-      <section class="karta-container">
-        <div class="karta-content">
-          <div class="karta-bild">
+      <section className="karta-container">
+        <div className="karta-content">
+          <div className="karta-bild">
             <img src={karta} alt="Sjukhus-karta" />
           </div>
 
-          <div class="karta-text">
+          <div className="karta-text">
             <h2>Hitta på sjukhuset</h2>
             <p>
               Kartan visar{" "}
