@@ -92,7 +92,7 @@ body {
 }
 
 .hero-link:hover {
-  background-color: #23af2cc7;
+  background-color: #20a029;
 }
 
 .text-overlay,
@@ -131,10 +131,17 @@ body {
 .norden-rubrik {
   color: #242424;
   font-size: 34px;
-  text-align: left;
-  margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 5px;
   margin-top: 5%;
   margin-left: 20px;
+}
+
+.norden-paragraf {
+  font-size: 20px;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3%;
 }
 
 .country-list {
@@ -171,10 +178,6 @@ body {
   color: #ffffffde;
 }
 
-.country-coming {
-  margin-top: 10px;
-}
-
 .utforska-link {
   display: flex;
   justify-content: center;
@@ -192,10 +195,90 @@ body {
 }
 
 .utforska-link:hover {
-  background-color: #23af2cc7;
+  background-color: #20a029;
 }
 
 /* NORDICCOUNTRIES COMPONENT */
+
+/* GLOBALCOUNTRIES COMPONENT */
+
+.global-container {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 20px;
+  background-color: #f1f1f5;
+}
+
+.global-rubrik {
+  color: #242424;
+  font-size: 34px;
+  text-align: center;
+  margin-bottom: 5px;
+  margin-top: 5%;
+}
+
+.global-paragraf {
+  font-size: 20px;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3%;
+}
+
+.global-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 30px;
+  gap: 20px;
+}
+
+.global-box {
+  width: 270px;
+  height: 270px;
+  background-color: #005ec5;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.global-box h1 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: auto;
+  color: #ffffffde;
+}
+
+.global-box p {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: auto;
+  color: #ffffffde;
+}
+
+.button-content {
+  display: flex;
+  justify-content: center;
+}
+
+.las-mer {
+  padding: 15px 30px;
+  border-radius: 26px;
+  background-color: #23af2d;
+  color: #ffffffde;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.las-mer:hover {
+  background-color: #20a029;
+}
+
+/* GLOBALCOUNTRIES COMPONENT */
 
 /* INFORMATION MODERBOLAG */
 
@@ -400,10 +483,71 @@ body {
 
 /* FOOTER */
 
-.test {
-  background-color: lightgray;
+/* JOURNAL */
+
+.journal-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 20px;
 }
 
-.test ul {
-  background-color: #23af2d;
+.journal-section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  width: 100%;
+  gap: 15px;
+  border-radius: 12px;
 }
+
+.journal-rubrik {
+  color: #242424;
+  font-size: 34px;
+  text-align: center;
+  margin-bottom: 5px;
+  margin-top: 5%;
+}
+
+.journal-paragraf {
+  font-size: 20px;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3%;
+}
+
+.journal-ruta {
+  display: flex;
+  flex-direction: column;
+  background-color: #f9f9f9;
+  padding: 15px;
+  flex: 1 1 calc(50% - 15px); /* 5 kolumner (20% var), minus gap */
+  max-width: 400px;
+  min-width: 200px;
+  min-height: 200px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.journal-avstand {
+  margin: 10px;
+}
+
+.journal-patient {
+  color: #53565f;
+  font-size: 16px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.journal-anteckningar {
+  color: #53565f;
+  font-size: 16px;
+}
+
+/* JOURNAL */

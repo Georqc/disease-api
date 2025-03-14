@@ -23,9 +23,18 @@ function NordicCountries() {
 
   return (
     <div className="country-container">
-      <h1 className="norden-rubrik">
-        <span className="text-overlay-bottom">Covid-19 Statistik</span> - Norden
-      </h1>
+      <h1 className="norden-rubrik">Norden Covid-19 Statistik</h1>
+      <p className="norden-paragraf">
+        Få en inblick i hur{" "}
+        <span className="text-overlay-bottom">pandemin</span> har{" "}
+        <span className="text-overlay-bottom">påverkat</span> de{" "}
+        <span className="text-overlay-bottom">nordiska länderna</span>. Här
+        hittar du uppdaterad data om{" "}
+        <span className="text-overlay-bottom-green">bekräftade fall</span>,
+        <span className="text-overlay-bottom-green">dödsfall</span> och{" "}
+        <span className="text-overlay-bottom-green">återhämtade patienter</span>{" "}
+        för Sverige, Norge, Danmark, Finland och Island.
+      </p>
       <div className="country-list">
         {data.map((countryData, index) => (
           <div key={index} className="country-box">
