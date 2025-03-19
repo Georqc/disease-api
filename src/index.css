@@ -316,7 +316,7 @@ body {
   flex: 1;
   margin-left: 20px;
   max-width: 600px;
-  margin-top: 4%;
+  margin-top: 2.5%;
 }
 
 .moderbolag-text h2 {
@@ -328,6 +328,10 @@ body {
 .moderbolag-text p {
   font-size: 16px;
   color: #242424;
+}
+
+.moderbolag-api-journal {
+  text-decoration: none;
 }
 
 .text-overlay,
@@ -364,10 +368,35 @@ body {
   background-color: #23af2d;
 }
 
-/* INFORMATION MODERBOLAG */
+@media (max-width: 768px) {
+  .moderbolag-container {
+    padding: 20px 0;
+    justify-content: center;
+  }
 
-/* KARTA MODERBOLAG */
+  .moderbolag-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
+  .moderbolag-bild {
+    width: 90%;
+  }
+
+  .moderbolag-bild img {
+    margin-left: 0;
+  }
+
+  .moderbolag-text {
+    width: 85%;
+    text-align: center;
+    margin: 0;
+  }
+}
+
+/* INFORMATION MODERBOLAG */ /* KARTA MODERBOLAG */
 .karta-container {
   display: flex;
   justify-content: flex-start;
@@ -417,6 +446,35 @@ body {
   color: #242424;
 }
 
+@media (max-width: 768px) {
+  .karta-container {
+    padding: 20px 0;
+    justify-content: center;
+  }
+
+  .karta-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .karta-bild {
+    width: 80%;
+  }
+
+  .karta-bild img {
+    margin-right: 0;
+  }
+
+  .karta-text {
+    width: 85%;
+    text-align: center;
+    margin: 0;
+  }
+}
+
 /* KARTA MODERBOLAG */
 
 /* FOOTER  */
@@ -425,7 +483,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 30px 20px;
   background-color: #242424;
   margin-top: auto;
 }
@@ -479,6 +537,35 @@ body {
   justify-content: center;
   text-align: center;
   color: #ffffffde;
+}
+
+/* FOOTER @MEDIA */
+
+@media (max-width: 768px) {
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-om-oss {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .copyright {
+    margin-bottom: 15px;
+    font-weight: 700;
+  }
+
+  .footer-nav {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .footer-nav ul {
+    font-weight: 700;
+  }
 }
 
 /* FOOTER */
@@ -536,13 +623,24 @@ body {
 
 .journal-avstand {
   margin: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
 }
 
 .journal-patient {
   color: #53565f;
   font-size: 16px;
   margin-bottom: 15px;
-  text-align: center;
+  margin-left: 10px;
+  width: 24%;
+}
+
+.journal-personnummer {
+  color: #53565f;
+  font-size: 16px;
+  margin-bottom: 15px;
+  width: 50%;
 }
 
 .journal-anteckningar {

@@ -23,7 +23,7 @@ function NordicCountries() {
 
   return (
     <div className="country-container">
-      <h1 className="norden-rubrik">Norden Covid-19 Statistik</h1>
+      <h1 className="norden-rubrik">Nordens Covid-19 Statistik</h1>
       <p className="norden-paragraf">
         Få en inblick i hur{" "}
         <span className="text-overlay-bottom">pandemin</span> har{" "}
@@ -47,7 +47,7 @@ function NordicCountries() {
         ))}
       </div>
       <div>
-        <Link to="" className="utforska-link">
+        <Link to="/Statistik" className="utforska-link">
           Utforska mer
         </Link>
       </div>

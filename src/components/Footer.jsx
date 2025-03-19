@@ -24,9 +24,11 @@ function Footer() {
             <Link to="/">Startsida</Link>
           </li>
           <li>
-            <Link to="../pages/NordicCountries">Statistik</Link>
+            <Link to="/Statistik">Statistik</Link>
           </li>
-          <li>Globalt</li>
+          <li>
+            <Link to="/Journal">Journal</Link>
+          </li>
         </ul>
       </div>
     </footer>

@@ -9,7 +9,7 @@ function HeroBanner() {
         och följ de senaste{" "}
         <span className="text-overlay-bottom">trenderna</span> i din region.
       </p>
-      <Link to="" className="hero-link">
+      <Link to="/Statistik" className="hero-link">
         Utforska Statistik
       </Link>
     </div>

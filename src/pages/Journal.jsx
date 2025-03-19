@@ -4,11 +4,11 @@ const Journal = () => {
   const [journalData, setJournalData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5020/api/Journal")
+    fetch("https://informatik12.ei.hv.se/JournalAPI/api/Journal/")
       .then((response) => response.json())
       .then((data) => {
-        console.log("Data hämtad:", data); // Lägg till denna rad
-        setJournalData(data); // Sätt datan i state
+        console.log("Data hämtad:", data);
+        setJournalData(data);
       })
       .catch((error) => {
         console.error("Fel vid hämtning av data:", error);
@@ -19,10 +19,15 @@ const Journal = () => {
     <div className="journal-container">
       <h1 className="journal-rubrik">Journal</h1>
       <p className="journal-paragraf">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis
-        labore exercitationem nobis voluptatibus sint iusto fuga laudantium ab,
-        sit dignissimos. Assumenda maxime molestias at ipsa nesciunt quibusdam
-        ullam id fugit.
+        Få en översikt av patientens aktuella status, inklusive{" "}
+        <span className="text-overlay-bottom">ID</span>,{" "}
+        <span className="text-overlay-bottom-green">postnummer</span> och
+        viktiga <span className="text-overlay-bottom">anteckningar</span>. Här
+        kan du se <span className="text-overlay-bottom-green">relevant</span>{" "}
+        <span className="text-overlay-bottom">information</span> som hjälper
+        till att säkerställa korrekt och snabb hantering av{" "}
+        <span className="text-overlay-bottom">patientens</span>{" "}
+        <span className="text-overlay-bottom-green">ärende</span>.
       </p>
       <div className="journal-section">
         {journalData.length > 0 ? (
@@ -30,13 +35,16 @@ const Journal = () => {
             <div key={index} className="journal-ruta">
               <div className="journal-avstand">
                 <p className="journal-patient">
-                  <strong>Patient ID:</strong> {journal.patientId}
+                  <strong>Patient ID</strong> {journal.journalId}
                 </p>
-                <p className="journal-anteckningar">
-                  <strong>Anteckningar:</strong> {journal.anteckning}{" "}
-                </p>{" "}
-                <br />
+                <p className="journal-personnummer">
+                  <strong>Pers. nummer</strong> {journal.personnummer}
+                </p>
               </div>
+              <p className="journal-anteckningar">
+                <strong>Anteckningar:</strong> {journal.anteckning}{" "}
+              </p>{" "}
+              <br />
             </div>
           ))
         ) : (
